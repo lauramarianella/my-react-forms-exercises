@@ -1,9 +1,9 @@
 import React from 'react';
-
-// Make a form with 2 text inputs: first name and last name. It also has a submit button.
-// When the user clicks the submit button,
-// make a popup that says something like "Hello Bob Dole" where Bob
-// is the first name entered by the user and Dole the last.
+/** Question 1
+Make a form with 2 text inputs: first name and last name. It also has a submit button.
+When the user clicks the submit button,
+make a popup that says something like "Hello Bob Dole" where Bob
+is the first name entered by the user and Dole the last.*/
 
 class App extends React.Component {
   constructor() {
