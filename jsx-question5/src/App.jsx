@@ -22,6 +22,7 @@ class App extends React.Component {
   onSubmitHandler = (ev) => {
     ev.preventDefault();
     window.alert(`Hello: ${this.state.name}  ${this.state.lastName}`);
+    this.setState({ name: '', lastName: '' });
   };
 
   onChangeHandler = (ev) => {
@@ -36,10 +37,14 @@ class App extends React.Component {
   }
   onSubmitFeedbackHandler = (ev) => {
     ev.preventDefault();
+
     this.state.numCharsFeedback = String(this.state.feedback).length;
+
     alert(
       `you've submitted ${this.state.numCharsFeedback} characters of feedback`
     );
+
+    this.setState({ feedback: '', numCharsFeedback: 0 });
   };
 
   render() {
@@ -84,6 +89,7 @@ class App extends React.Component {
               type="text"
               name="feedback"
               onChange={this.onChangeHandler}
+              value={this.state.feedback}
             />
             <input type="submit" value="Enter" />
           </form>
